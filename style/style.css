@@ -1,0 +1,47 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Roboto Slab', serif;
+}
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #400D51;
+}
+.nav-container-logo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    gap: 10px;
+}
+.nav-container-logo img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.nav-container-logo h3 {
+    color: #fff;
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 25px;
+}
+.main {
+    width: 100%;
+    height: calc(100vh - 80px );
+    display: flex;
+}
+.container-main {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-main img {
+    width: 300px;
+}
+.container-main h1 {
+    font-weight: 400;
+    color:#400D51;
+}
