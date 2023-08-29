@@ -3,6 +3,7 @@ body {
     margin: 0 auto;
     font-family: 'Roboto Slab', serif !important;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 header {
     height: auto;
@@ -139,11 +140,34 @@ backdrop-filter: blur(5.5px);
     margin-bottom: 40px;
 }
 .card-img-top {
-    height: 250px;
+    height: 120px;
+    width: 130px;
+    margin-top: 10px;
+}
+.card {
+    display: flex;
+    align-items: center;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.83);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+box-shadow: 2px 4px 8px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 4px 8px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 8px -4px rgba(0,0,0,0.75);
+}
+.card-title {
+    color: #F27121;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*nosotros*/
 .nosotros {
-    background-color: #E94057;
+    background-color: #fff;
     height: fit-content;
 }
 .section-container-titulo {
@@ -158,25 +182,65 @@ backdrop-filter: blur(5.5px);
 }
 .container-nosotros-txt img {
     width: 300px;
-    height: 200px;
+    height: 270px;
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 .container-nosotros-txt p {
-    color: #fff;
+    color: #454545;
     margin-top: 20px;
     margin-bottom: 30px;
+    font-size: 14px;
+}
+.nosotros h1 {
+    color: #454545;
+}
+.divisor-titulo-2 {
+    width: 100px;
+    height: 2px;
+    background-color: #454545;
+    border-radius: 5px;
+    opacity: 1;
+    border: #454545;
 }
 .titulo-section {
     color: #fff;
     font-size: 24px;
     margin-top: 30px;
 }
-
+/*seccion contacto*/
+.contacto {
+    margin-bottom: 40px;
+}
+.contacto h1 {
+    color: #454545;
+}
+.container-form {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+}
+.container-feedredes {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.container-feedredes h4 {
+    font-size: 14px;
+    color: #8A2387;
+    font-weight: bold;
+}
+.container-feedredes p {
+    font-size: 14px;
+}
+/*footer*/
 footer {
     width: 100%;
-    height: 100px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +248,7 @@ footer {
 }
 .footer-container {
     width: 100%;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -196,6 +260,11 @@ footer {
 .footer-copy {
     color: #fff;
     font-size: 12px;
+}
+/*confirmacion consulta enviada*/
+.main-img-confirmacion img{
+    width: 300px;
+    height: auto;
 }
 @media screen and (min-width:768px) and (max-width:1024px) {
     .main {
@@ -210,11 +279,14 @@ footer {
         justify-content: space-around;
     }
     .container-nosotros-txt p {
-        width: 50%;
+        width: 100%;
     }
     .container-nosotros-txt img {
         width: 380px;
         height: 260px;
+    }
+    .nosotros-txt {
+        width: 50%;
     }
 }
 @media screen and (min-width:1024px) {
@@ -227,15 +299,19 @@ footer {
         height: fit-content;
     }
     .main-titulo {
-        font-size: 50px;
+        font-size: 45px;
     }
     .main-subtitulo {
-        font-size: 26px;
+        font-size: 22px;
         margin-top: 10px;
         margin-bottom: 20px;
     }
+    .main-img img {
+        width: 400px;
+        height: auto;
+    }
     .cta {
-        font-size: 20px;
+        font-size: 18px;
     }
     .fav-btn img {
         width: 65px;
@@ -252,7 +328,7 @@ footer {
         gap: 15px;
     }
     .container-nosotros-txt p {
-        width: 50%;
+        width: 100%;
         font-size: 20px;
     }
     .container-nosotros-txt img {
@@ -262,4 +338,72 @@ footer {
     .titulo-section {
         font-size: 30px;
     }
+    .nosotros-txt {
+        width: 50%;
+    }
+    .principal {
+        width:400px;
+    }
+    form {
+        width: 400px;
+    }
+    input, textarea {
+        width:400px;
+        height:35px;
+        font-size:16px;
+    }
+    textarea {
+        height:200px;
+    }
+    #submit {
+        width:100px;
+        height:40px;
+    }
+    .servicios {
+        height: 90vh;
+        padding-top: 40px;
+    }
+    .nosotros {
+        padding-top: 40px;
+    }
+}
+
+/*formulario de contacto*/
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+.principal {
+    display:block;
+    margin:0 auto;
+    width:300px;
+    color: #666666;
+    font-family:Arial;
+}
+form {
+    width: 300px;
+}
+input, textarea {
+    width:300px;
+    height:27px;
+    background: #F27121;
+    border:2px solid #f6f6f6;
+    padding:10px;
+    margin-top:5px;
+    font-size:10px;
+    color:#ffffff;
+}
+textarea {
+    height:150px;
+}
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+::placeholder {
+    color: #fff;
 }
